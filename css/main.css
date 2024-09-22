@@ -339,5 +339,159 @@ html, body {
 
 }
 
+/*PORTFOLIO*/
+
+.portfolio {
+    max-height: 1700px;
+    
+    padding: 100px 0;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+   
+
+    background-color: var(--bg-black);
+
+}
+
+.portfolio-title {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0%;
+
+    padding: 30px 0;
+
+    color: var(--header-text);
+    text-align: center;
+
+}
+
+.portfolio-list {
+    max-height:100%;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 30px;
+    justify-content: center;
+    align-items:center;
+
+}
+.porfolio-list__item {
+    padding: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    row-gap: 30px;
+
+    background-color: var(--bg-gray);
+    border-radius: 29px;
+    box-shadow: 0px 4px 15px 0px rgba(27, 27, 27, 0.28);
+}
+
+.project-img {
+
+}
+
+.project-title {
+    font-size: 24px;
+    font-weight: 300;
+    line-height: 29px;
+    letter-spacing: 0%;
+    text-align: left;
+
+    color: var(--header-text);
+    text-align: center;
+}
+
+.portfolio-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    column-gap: 10px;
+
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 21px;
+    letter-spacing: 0%;
+    text-align: left;
+    color: var(--accent);
+}
+
+/*FOOTER*/
+
+.footer {
+    max-height: 238px;
+    width: 100%;
+    background-color: var(--bg-gray);
+    padding: 50px 0;
+}
+.footer-wraper {
+
+    width: 738px;
+    height: 138px;
+    display: flex;
+    justify-content: space-between;
+
+    margin: 0 auto;
+}
+.footer-nav {
+    color: var(--header-text);
+}
+.footer-nav-list {
+    display: flex;
+   
+    flex-direction: column;
+    row-gap: 21px;
+}
+.footer-nav-list__item {
+}
+.footer-nav-list__link {
+    color: var(--header-text);
+}
+
+.nav-list__link--active {
+}
+.footer-contact {
+
+    color: var(--header-text);
+}
+.footer-contact-list {
+    display: flex;
+   
+    flex-direction: column;
+    row-gap: 21px;
+    
+
+
+}
+.footer-contact-list__item {
+}
+.footer-contact-list__link {
+    color: var(--header-text);
+}
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+}
+.footer-logo__link {
+    color: var(--header-text);
+}
+.footer-logo__link strong {
+    color: var(--accent);
+}
+.copyright {
+    color: var(--header-text);
+}
+
+
 
 
