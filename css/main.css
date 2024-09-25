@@ -37,7 +37,7 @@ html, body {
 
 
 .section {
-    height: 100%;
+    /* height: 100%; */
     padding: 70px 0;
     background-color: var(--bg-black);
 }
@@ -460,7 +460,7 @@ html, body {
 .project-getails {
     margin: 0 auto;
     max-width: 100%;
-
+ 
     display: flex;
     flex-direction: column;
     align-items:center;
@@ -632,14 +632,11 @@ html, body {
     flex-direction: column;
     row-gap: 21px;
 }
-.footer-nav-list__item {
-}
+
 .footer-nav-list__link {
     color: var(--header-text);
 }
 
-.nav-list__link--active {
-}
 
 .footer-contact {
     width: 33%;
@@ -651,16 +648,13 @@ html, body {
    
     flex-direction: column;
     row-gap: 21px;
-    
-
-
 }
-.footer-contact-list__item {
-}
+
 
 .footer-contact-list__link {
     color: var(--header-text);
 }
+
 .footer-logo {
     width: 33%;
 
@@ -773,6 +767,45 @@ html, body {
         max-height: 50px;
         max-width: 50px;
     }
+
+        /*Project details*/
+
+   
+        .project-getails__item {
+            display: flex;
+            flex-direction: column;
+    
+            column-gap: 30px;
+            padding: 30px;
+            border-radius: 25px;
+        
+            margin-bottom: 20px;
+        
+        }
+        .footer {
+            padding: 40px 0;
+        }
+        .footer-wraper {
+            font-size: 14px;
+            line-height: 17px;
+            padding: 40px 0;
+        }
+
+        .footer-nav-list {
+
+            row-gap: 15px;
+        }
+        
+    
+        .footer-contact-list {
+    
+            row-gap: 15px;
+        }
+      
+        
+        .footer-logo {
+            row-gap: 30px;
+        }
 }
 
 
@@ -910,11 +943,46 @@ html, body {
       
     }
 
+    .footer {
+        padding: 30px 0;
+    }
+
+    .footer-wraper {
+        font-size: 12px;
+        line-height: 17px;
+        padding: 30px 0;
+    }
+
+
+    .footer-nav-list {
+
+        row-gap: 10px;
+    }
+    
+
+    .footer-contact-list {
+
+        row-gap: 10px;
+    }
+  
+    
+    .footer-logo {
+        row-gap: 20px;
+    }
+
 }
 
 /* 570 */
 
 @media (max-width: 570px) {
+
+    .title-1 {
+        font-size: 24px;
+        line-height: 30px;
+    
+        padding-bottom: 30px;
+    }
+
     .container {
         margin: 0 auto;
         padding: 0 10px;
@@ -1012,5 +1080,133 @@ html, body {
     .item__icon {
         max-height: 30px;
         max-width: 30px;
+    }
+
+    /*Project details*/
+
+   
+    .project-getails__item {
+        display: flex;
+        flex-direction: column;
+
+        column-gap: 30px;
+        padding: 30px;
+        border-radius: 25px;
+    
+        margin-bottom: 20px;
+    
+    }
+    .project-getails__img {
+    
+        width: 100%;
+    
+        border-radius: 29px;
+    
+        
+    
+    }
+    
+    .project-details__desc {
+    
+        font-size: 14px;
+        line-height: 19px;
+        letter-spacing: 130%;
+    }
+    
+    .project-details__skills {
+        font-size: 14px;
+        line-height: 19px;
+    
+        margin-bottom: 20px;
+    }
+    
+    .outline-btn {
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        column-gap: 5px;
+        row-gap: 5px;
+    
+        padding: 10px 20px 10px;
+    
+        border: 2px solid var(--accent);
+    
+        color: var(--accent);
+        /* background-color: var(--accent); */
+        border-radius: 6px;
+        box-shadow: 0px 2px 13px 0px rgba(226, 158, 0, 0.48);
+    
+        transition: opacity 0.2s ease-in;
+    
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21px;
+        letter-spacing: 0%;
+    }
+    
+    .outline-btn:hover {
+        opacity: 0.8;
+    }
+    
+    .outline-btn:active {
+        position: relative;
+        top: 1px;
+    }
+    
+    
+    
+    .github__icon{
+        max-height:40px;
+        max-width:40px;
+        fill: var(--accent);
+    
+    }
+
+
+
+    .content-list {
+        row-gap: 20px;
+    
+    }
+    
+    .content-list__item {
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 18px;
+        letter-spacing: 1%;
+        color: var(--header-text);
+    
+    }
+
+    .footer {
+        padding: 20px 0;
+    }
+
+    .footer-wraper {
+        font-size: 12px;
+        line-height: 15px;
+        padding: 20px 0;
+        row-gap: unset;
+    }
+
+
+    .footer-nav-list {
+        display: none;
+        row-gap: 10px;
+    }
+    
+
+    .footer-contact-list {
+        display: none;
+
+        row-gap: 10px;
+    }
+  
+    
+    .footer-logo {
+        width: 100%;
+        row-gap: 20px;
+        justify-content: center;
+        align-items: center;
     }
 }
