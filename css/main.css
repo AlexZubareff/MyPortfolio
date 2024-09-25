@@ -976,11 +976,30 @@ html, body {
 
 @media (max-width: 570px) {
 
+    .section {
+        padding: 10px 0 20px;
+    }
+
     .title-1 {
-        font-size: 24px;
+        font-size: 30px;
         line-height: 30px;
     
         padding-bottom: 30px;
+    }
+
+    
+    .title-2 {
+        font-size: 24px;
+        line-height: 30px;
+    
+        padding: 20px 0;
+
+    
+    }
+    
+    .title-3 {
+        font-size: 16px;
+        line-height: 21px;
     }
 
     .container {
@@ -1092,31 +1111,25 @@ html, body {
         column-gap: 30px;
         padding: 30px;
         border-radius: 25px;
-    
         margin-bottom: 20px;
-    
     }
+
     .project-getails__img {
-    
         width: 100%;
-    
         border-radius: 29px;
-    
-        
-    
+        margin-bottom: 20px;
     }
     
     .project-details__desc {
-    
         font-size: 14px;
         line-height: 19px;
         letter-spacing: 130%;
+        text-align: center;
     }
     
     .project-details__skills {
         font-size: 14px;
         line-height: 19px;
-    
         margin-bottom: 20px;
     }
     
@@ -1132,7 +1145,6 @@ html, body {
         border: 2px solid var(--accent);
     
         color: var(--accent);
-        /* background-color: var(--accent); */
         border-radius: 6px;
         box-shadow: 0px 2px 13px 0px rgba(226, 158, 0, 0.48);
     
@@ -1183,7 +1195,7 @@ html, body {
     }
 
     .footer-wraper {
-        font-size: 12px;
+        font-size: 16px;
         line-height: 15px;
         padding: 20px 0;
         row-gap: unset;
@@ -1208,5 +1220,9 @@ html, body {
         row-gap: 20px;
         justify-content: center;
         align-items: center;
+    }
+
+    .copyright {
+        font-size: 10px;
     }
 }
