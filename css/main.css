@@ -114,7 +114,8 @@ body {
 
 .logo strong::before {
     content:attr(data-text);
-    color: var(--header-text);
+    color: var(--blue); 
+    /* color: var(--header-text); */
     position: absolute;
     top: 10;
     left: 0;
