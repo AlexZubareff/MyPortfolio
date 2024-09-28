@@ -4,14 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <meta http-equiv="Content-Security-Policy" content="font-src 'self' data:; img-src 'self' data:; default-src 'self' http://127.0.0.1:5500/">
-    <meta http-equiv="Content-Security-Policy"
-  content="default-src 'self' data:gap: http://www.visitsingapore.com 
-  https://ssl.gstatic.com 'unsafe-eval';
-  style-src 'self' 'unsafe-inline';
-  media-src *;
-  script-src 'sha256-V+/U3qbjHKP0SaNQhMwYNm62gfWX4QHwPJ7We1PXokI='
-"> -->
     <title>Frontend/Backend developer Alexey Zubarev</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
@@ -29,8 +21,8 @@
             <div class="nav-row">
                 <a href="../index.html" class="logo">Alexey <strong>Zubarev</strong></a>
                 <ul class="nav-list">
-                    <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Home</a>
-                    </li>
+                    <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Home</a></li>
+                    <li class="nav-list__item"><a href="./projects.html" class="nav-list__link">Projects</a></li>
                     <li class="nav-list__item"><a href="./skills.html" class="nav-list__link ">Skills</a></li>
                     <li class="nav-list__item"><a href="./contacts.html" class="nav-list__link nav-list__link--active">Contacts</a></li>
                 </ul>
@@ -69,16 +61,11 @@
                         <div class="form-group">
                             <label for="" class="msg-form__label">Message</label>
                             <textarea id="msg" class="msg-form__textarea"></textarea>
-                            <!-- <input type="textarea" class="msg-form__input"> -->
                         </div>
 
                         <input type="submit" value="Send" id="sendBtn" class="btn">
                     </form>
                 </li>
-
-
-
-
             </ul>
         </div>
     </main>
@@ -115,7 +102,7 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script src="../js/main.js">
+    <script src="../js/tg_message_service.js">
 
     </script>
 </body>
