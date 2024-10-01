@@ -1265,12 +1265,22 @@ button, input[type="submit"] {
 
 @media (max-width: 425px) {
 
+    .title-1 {
+        padding: 0 0 5px;
+    }
+
+    .title-2 {
+        padding: 10px 0;
+    }
+
     .nav-row {
 
         row-gap: 10px;
     }
 
     .nav-list {
+        padding: 0;
+        column-gap: 20px;
         font-size: 16px;
     }
 
@@ -1286,13 +1296,17 @@ button, input[type="submit"] {
 
     .msg-form {
         row-gap: 15px;
-        min-width: 250px;
+        min-width: 270px;
     
         font-size: 12px;
         font-weight: 200;
         line-height: 20px;
         letter-spacing: 0%;
     
-        padding: 0 15px;
+        padding: 0 5px;
+    }
+
+    .footer-wraper {
+        padding: 0;
     }
 }
