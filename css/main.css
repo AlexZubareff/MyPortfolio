@@ -116,7 +116,7 @@ body {
 
 .logo strong::before {
     content:attr(data-text);
-    color: var(--blue); 
+    color: var(--blue);
     /* color: var(--header-text); */
     position: absolute;
     top: 10;
@@ -432,10 +432,10 @@ body {
 
 }
 
-.porfolio-list__item {
+.portfolio-list__item {
     padding: 30px;
     max-width: 370px;
-
+    max-height: 485px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -465,7 +465,7 @@ body {
 
 /*Project details*/
 
-.project-getails {
+.project-details {
     margin: 0 auto;
     max-width: 100%;
 
@@ -474,7 +474,7 @@ body {
     align-items: center;
 }
 
-.project-getails__item {
+.project-details__item {
     display: flex;
     justify-content: baseline;
     align-items: center;
@@ -488,8 +488,8 @@ body {
     margin-bottom: 40px;
 }
 
-.project-getails__img {
-    max-width: 100%;
+.project-details__img {
+    max-width: 50%;
     border-radius: 29px;
 }
 
@@ -626,6 +626,8 @@ body {
 .msg-form__input {
     width: 100%;
     height: 40px;
+
+    padding: 0 10px;
     background-color: var(--header-text);
     /* background-color: var(--bg-gray); */
     border: 1px solid var(--accent);
@@ -641,6 +643,8 @@ body {
     width: 100%;
     height: 200px;
     color: var(--black);
+    caret-color: var(--accent);
+    padding: 10px;
 
 }
 
@@ -662,7 +666,7 @@ button, input[type="submit"] {
     box-shadow: 0px 2px 13px 0px rgba(226, 158, 0, 0.48);
 
     transition: opacity 0.2s ease-in;
- 
+
     cursor: pointer;
 }
 
@@ -688,7 +692,7 @@ button, input[type="submit"] {
     justify-content: center;
     align-items:center;
     font-weight: 500;
-    opacity: 0.95;
+    opacity: 0.8;
     padding: 0 15px;
     text-align: center;
 }
@@ -993,7 +997,7 @@ button, input[type="submit"] {
 
     }
 
-    
+
     .project-getails__item {
         display: flex;
         flex-direction: column;
@@ -1005,12 +1009,12 @@ button, input[type="submit"] {
     .msg-form {
         row-gap: 20px;
         width: 550px;
-    
+
         font-size: 14px;
         font-weight: 200;
         line-height: 20px;
         letter-spacing: 0%;
-    
+
         padding: 0 15px;
     }
 
@@ -1226,12 +1230,12 @@ button, input[type="submit"] {
     .msg-form {
         row-gap: 20px;
         width: 450px;
-    
+
         font-size: 14px;
         font-weight: 200;
         line-height: 20px;
         letter-spacing: 0%;
-    
+
         padding: 0 15px;
     }
 
@@ -1307,12 +1311,12 @@ button, input[type="submit"] {
     .msg-form {
         row-gap: 15px;
         width: 350px;
-    
+
         font-size: 12px;
         font-weight: 200;
         line-height: 20px;
         letter-spacing: 0%;
-    
+
         padding: 0 5px;
     }
 

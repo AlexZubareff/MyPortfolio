@@ -1,110 +1,104 @@
+// ВАРИАНТ БЕЗ ИСПОЛЬЗОВАНИЯ СЕРВЕРА ДЛЯ ОБРАБОТКИ СООБЩЕНИЙ
 
-    // ВАРИАНТ БЕЗ ИСПОЛЬЗОВАНИЯ СЕРВЕРА ДЛЯ ОБРАБОТКИ СООБЩЕНИЙ
+const TOKEN = '7518521452:AAGQvr3b5Q3fcOqHbmHMOVJkT9dsPLm0msQ'
+const CHAT_ID = '-1002318470204'
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`
 
-    const TOKEN = "7518521452:AAGQvr3b5Q3fcOqHbmHMOVJkT9dsPLm0msQ";
-    const CHAT_ID = "-1002318470204";
-    const URI_API = `https://api.telegram.org/bot${ TOKEN }/sendMessage`;
+// const URI_SERVER = 'http://localhost:3000/telegram-message';   //Активировать если используем сервер
 
-    // const URI_SERVER = 'http://localhost:3000/telegram-message';   //Раскоментировать если используем сервер
+document.getElementById('tg-form').addEventListener('submit', function (e) {
+  e.preventDefault()
+  let text = document.querySelector('#msg')
+  const elementPopup = document.getElementById('alertPop-up')
 
+  let content = document.getElementById('alertContent')
 
-    document.getElementById('tg-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        let text = document.querySelector('#msg');
-        const elementPopup = document.getElementById('alertPop-up');
+  let message = `<b>Заявка с сайта</b>\n`
+  message += `<b>Отправитель:</b> ${this.name.value}\n`
+  message += `<b>Телефон:</b> ${this.phone.value}\n`
+  message += `<b>Сообщение:</b> ${text.value}\n`
 
-        let content  = document.getElementById('alertContent');
-        
+  if (this.name.value === '' || this.phone.value === '' || text.value === '') {
+    content.innerHTML = `<h1>Все поля должны быть заполнены!</h1>`
+    elementPopup.style.borderColor = 'red'
+    elementPopup.style.color = 'red'
+    elementPopup.show()
 
-       let message = `<b>Заявка с сайта</b>\n`;
-        message += `<b>Отправитель:</b> ${this.name.value}\n`;
-        message += `<b>Телефон:</b> ${this.phone.value}\n`;
-        message += `<b>Сообщение:</b> ${text.value}\n`;
+    setTimeout(() => {
+      elementPopup.close()
+      elementPopup.style.borderColor = ''
+    }, 2000)
+  } else {
+    axios
+      .post(URI_API, {
+        chat_id: CHAT_ID,
+        parse_mode: 'html',
+        text: message,
+      })
+      .then(res => {
+        this.name.value = ''
+        this.phone.value = ''
+        text.value = ''
 
+        content.innerHTML = `<h1>Сообщение отправлено!</h1>`
+        elementPopup.show()
 
-        if (this.name.value === '' || this.phone.value === '' || text.value === '') {
-            content.innerHTML = `<h1>Все поля должны быть заполнены!</h1>`;
-            elementPopup.style.borderColor = "red";
-            elementPopup.show();
-            
-            setTimeout(() => {
-                elementPopup.close();
-                elementPopup.style.borderColor = "";
-            }, 2000);
-        } else {
-            axios.post(URI_API, {
-                chat_id: CHAT_ID,
-                parse_mode: 'html',
-                text: message
-            })
-            .then((res) => {
+        setTimeout(() => {
+          elementPopup.close()
+        }, 2000)
+      })
+      .catch(err => {
+        console.warn(err)
+      })
+      .finally(() => {})
+  }
+})
 
-                    this.name.value = "";
-                    this.phone.value = "";
-                    text.value = "";
+// ВАРИАНТ С ИСПОЛЬЗОВАНИЕМ СЕРВЕРА
 
-                    content.innerHTML = `<h1>Сообщение отправлено!</h1>`;
-                    elementPopup.show()
+// document.getElementById('tg-form').addEventListener('submit', function(e) {
+//     e.preventDefault();
+//     let text = document.querySelector('#msg');
+//     const elementPopup = document.getElementById('alertPop-up');
 
-                setTimeout(() => {
-                    elementPopup.close();
-                }, 2000);
-            })
-            .catch((err) => {
-                console.warn(err);
-            })
-            .finally(() => {})
-        }
-        
-    })
+//     let content  = document.getElementById('alertContent');
 
+//     axios.post(URI_SERVER, {
 
-     // ВАРИАНТ С ИСПОЛЬЗОВАНИЕМ СЕРВЕРА
+//         name: this.name.value,
+//         phone: this.phone.value,
+//         message: text.value
+//         })
+//         .then((res) => {
+//             console.log(res);
 
+//             if(res.statusText === 'No Content') {
+//                 content.innerHTML = `<h1>Все поля должны быть заполнены!</h1>`;
+//                 elementPopup.style.borderColor = "red";
+//                 elementPopup.show();
 
-    // document.getElementById('tg-form').addEventListener('submit', function(e) {
-    //     e.preventDefault();
-    //     let text = document.querySelector('#msg');
-    //     const elementPopup = document.getElementById('alertPop-up');
+//                 setTimeout(() => {
+//                     elementPopup.close();
+//                     elementPopup.style.borderColor = "";
+//                 }, 2000);
+//             } else {
 
-    //     let content  = document.getElementById('alertContent');
+//                 this.name.value = "";
+//                 this.phone.value = "";
+//                 text.value = "";
 
-    //     axios.post(URI_SERVER, {
+//                 content.innerHTML = `<h1>Сообщение отправлено!</h1>`;
+//                 elementPopup.show();
 
-    //         name: this.name.value,
-    //         phone: this.phone.value,
-    //         message: text.value
-    //         })
-    //         .then((res) => {
-    //             console.log(res);
+//                 setTimeout(() => {
+//                     elementPopup.close();
+//                 }, 2000);
+//             }
 
-    //             if(res.statusText === 'No Content') {
-    //                 content.innerHTML = `<h1>Все поля должны быть заполнены!</h1>`;
-    //                 elementPopup.style.borderColor = "red";
-    //                 elementPopup.show();
-                    
-    //                 setTimeout(() => {
-    //                     elementPopup.close();
-    //                     elementPopup.style.borderColor = "";
-    //                 }, 2000);
-    //             } else {
+//         })
+//         .catch((err) => {
+//             console.warn(err);
+//         })
+//         .finally(() => {})
 
-    //                 this.name.value = "";
-    //                 this.phone.value = "";
-    //                 text.value = "";
-
-    //                 content.innerHTML = `<h1>Сообщение отправлено!</h1>`;
-    //                 elementPopup.show();
-                    
-    //                 setTimeout(() => {
-    //                     elementPopup.close();
-    //                 }, 2000);
-    //             }
-                
-    //         })
-    //         .catch((err) => {
-    //             console.warn(err);
-    //         })
-    //         .finally(() => {})
-
-    // })
+// })
