@@ -852,7 +852,7 @@ button, input[type="submit"] {
 
     /*Project details*/
 
-    .project-getails__item {
+    .project-details__item {
         display: flex;
         flex-direction: column;
         row-gap: 30px;
@@ -983,7 +983,7 @@ button, input[type="submit"] {
         column-gap: 10px;
     }
 
-    .porfolio-list__item {
+    .portfolio-list__item {
         padding: 20px;
         max-width: 270px;
         row-gap: 10px;
@@ -998,12 +998,17 @@ button, input[type="submit"] {
     }
 
 
-    .project-getails__item {
+    .project-details__item {
         display: flex;
         flex-direction: column;
 
         row-gap: 30px;
 
+    }
+
+    .project-details__img {
+        max-width: 80%;
+        border-radius: 29px;
     }
 
     .msg-form {
@@ -1159,7 +1164,7 @@ button, input[type="submit"] {
     /*Project details*/
 
 
-    .project-getails__item {
+    .project-details__item {
         display: flex;
         flex-direction: column;
 
@@ -1169,7 +1174,7 @@ button, input[type="submit"] {
         margin-bottom: 20px;
     }
 
-    .project-getails__img {
+    .project-details__img {
         width: 100%;
         border-radius: 29px;
         margin-bottom: 0;
@@ -1272,7 +1277,7 @@ button, input[type="submit"] {
         font-size: 10px;
     }
 }
-
+/* 425 */
 @media (max-width: 425px) {
 
     .title-1 {
@@ -1299,14 +1304,18 @@ button, input[type="submit"] {
         padding: 10px 10px;
     }
 
-    .project-getails__item {
+    .project-details__item {
         display: flex;
         flex-direction: column;
         row-gap: 15px;
-        padding: 30px;
+        padding: 20px;
         border-radius: 25px;
     }
 
+    .project-details__img {
+        max-width: 90%;
+        border-radius: 29px;
+    }
 
     .msg-form {
         row-gap: 15px;
@@ -1324,7 +1333,7 @@ button, input[type="submit"] {
         padding: 0;
     }
 }
-
+/* 375 */
 @media (max-width: 375px) {
 
     .header {
@@ -1337,7 +1346,7 @@ button, input[type="submit"] {
     }
 
 }
-
+/* 325 */
 @media (max-width: 325px) {
 
     .header {
